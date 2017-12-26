@@ -11,6 +11,14 @@
         a.src = 'https://api-cdn.amazon.com/sdk/login1.js';
         d.getElementById('amazon-root').appendChild(a);
       })(document);
+      
+      let authorizeRequest = document.getElementById('LoginWithAmazon').onclick = function() {
+        options = { scope : 'profile' };
+        amazon.Login.authorize(options,
+          'https://lloydas.github.io/privacy.html');
+          return false;
+        };
+      
     </script>
     
     
@@ -19,16 +27,6 @@
             src="https://images-na.ssl-images-amazon.com/images/G/01/lwa/btnLWA_gold_156x32.png"
             width="156" height="32" />
     </a>
-    
-    <script type="text/javascript">
-      let authorizeRequest = document.getElementById('LoginWithAmazon').onclick = function() {
-        options = { scope : 'profile' };
-        amazon.Login.authorize(options,
-          'https://lloydas.github.io/privacy.html');
-          return false;
-        };
-    </script>
-    
     
     
     <p>
