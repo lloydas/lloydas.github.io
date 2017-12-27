@@ -1,6 +1,7 @@
 <html>
   <script type="text/javascript">
     window.onAmazonLoginReady = function() {
+      console.log("onAmazonLoginReady");
       amazon.Login.setClientId('amzn1.application-oa2-client.5815d5058fb444c0b93783a79adec01d');
     };
     (function(d) {
@@ -11,6 +12,7 @@
     })(document);
     
     let authorizeRequest = document.getElementById('LoginWithAmazon').onclick = function() {
+      console.log("amazonloginclick");
       options = { scope : 'profile' };
       amazon.Login.authorize(options,
         'https://lloydas.github.io/after_login.html');
