@@ -13,7 +13,7 @@
         d.getElementById('amazon-root').appendChild(a);
       })(document);
       
-      let authorizeRequest = document.getElementById('LoginWithAmazon').onclick = function() {
+       document.getElementById('LoginWithAmazon').onclick = function() {
         console.log("amazonloginclick");
         options = { scope : 'profile' };
         amazon.Login.authorize(options,
