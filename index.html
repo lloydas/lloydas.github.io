@@ -16,13 +16,15 @@
         color: "Gold",
         authorization: function () {
             loginOptions = { scope: "profile postal_code payments:widget payments:shipping_address", popup: true };
-            authRequest = amazon.Login.authorize(loginOptions, "http://localhost");
+            authRequest = amazon.Login.authorize(loginOptions, "https://lloydas.github.io");
+            console.log(authRequest);
         },
         onError: function (error) {
           console.log("error");
             // something bad happened
         }
       });
+    
     </script>
   </body>
 </html>
