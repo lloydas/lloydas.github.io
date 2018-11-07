@@ -10,20 +10,23 @@
   <!--   <script type='text/javascript' src='https://static-na.payments-amazon.com/OffAmazonPayments/us/sandbox/js/Widgets.js'></script>
      -->
      <div id="amazon-root"></div>
-    <script type="text/javascript">
-      window.onAmazonLoginReady = function() {
-        amazon.Login.setClientId('amzn1.application-oa2-client.b6c62eed546741b58b5d7f5c2ae721b9');
-      };
-      (function(d) {
-        var a = d.createElement('script'); a.type =
-        'text/javascript'; a.async = true; a.id = 'amazonlogin-sdk';
-        a.src = 'https://assets.loginwithamazon.com/sdk/na/login1.js'; d.getElementById('amazon-root').appendChild(a);
-      })(document);
-    </script>
+     <script type="text/javascript">
+        window.onAmazonLoginReady = function() {
+         amazon.Login.setClientId('YOUR-CLIENT-ID');
+        };
+        (function(d) {
+          var a = d.createElement('script'); 
+          a.type = 'text/javascript'; 
+          a.async = true; 
+          a.id = 'amazonlogin-sdk';
+          a.src ='https://assets.loginwithamazon.com/sdk/na/login1.js'; 
+          d.getElementById('amazonroot').appendChild(a);
+        })(document);
+      </script>
 
 
 
-    <script type='text/javascript'>
+   <!--  <script type='text/javascript'>
     var authRequest;
     OffAmazonPayments.Button("amazonroot", "A1FFRQA5GYO6OD", {
         type: "LwA",
@@ -39,6 +42,6 @@
         }
       });
     
-    </script>
+    </script> -->
   </body>
 </html>
