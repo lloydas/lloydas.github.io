@@ -23,10 +23,14 @@
     </script>
 
     <script type="text/javascript">
-      document.getElementById('LoginWithAmazon').onclick = function() {
-        options = {};
-        options.scope = 'profile';
-        amazon.Login.authorize(options, function(response) {
+    document.getElementById('LoginWithAmazon').onclick = function() {
+       setTimeout(window.doLogin, l);
+       return false;
+    };
+    window.doLogin = function() {
+      options = {};
+      options.scope = 'profile';
+      amazon.Login.authorize(options, function(response) {
          if ( response.error ) {
              alert('oauth error ' + response.error);
          return;
@@ -37,10 +41,10 @@
              alert('Your unique ID is ' + response.profile.CustomerId);
              if ( window.console && window.console.log )
                 window.console.log(response);
-        });
-      });
-    };
-    </script>
+         });
+     });
+   };
+ </script>
 
   </body>
 </html>
