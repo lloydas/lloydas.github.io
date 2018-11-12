@@ -36,6 +36,7 @@
          return;
          }
          amazon.Login.retrieveProfile(response.access_token, function(response) {
+          console.log("response is here");
              alert('Hello, ' + response.profile.Name);
              alert('Your e-mail address is ' + response.profile.PrimaryEmail);
              alert('Your unique ID is ' + response.profile.CustomerId);
